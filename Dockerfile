@@ -19,8 +19,12 @@ RUN npm run build
 # Install serve globally
 RUN npm install -g serve
 
+# Copy start script
+COPY start.sh ./
+RUN chmod +x start.sh
+
 # Expose port
-EXPOSE 3000
+EXPOSE $PORT
 
 # Start the application
-CMD ["serve", "-s", "dist", "-l", "3000"] 
+CMD ["./start.sh"] 
