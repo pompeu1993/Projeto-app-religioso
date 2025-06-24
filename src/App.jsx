@@ -9,6 +9,8 @@ import { Separator } from './components/ui/separator';
 import { Toaster } from './components/ui/sonner';
 import { toast } from 'sonner';
 import LoginPopup from './components/LoginPopup';
+import { CompletionBanner } from './components/CompletionBanner';
+import { MVPSelector } from './components/MVPSelector';
 import { 
   Home, 
   FileText, 
@@ -64,6 +66,7 @@ function App() {
   const [panelsTab, setPanelsTab] = useState('chaplain');
   const [discoveryTab, setDiscoveryTab] = useState('pains-gains');
   const [selectedMenu, setSelectedMenu] = useState('overview');
+  const [isMVPSelectorOpen, setIsMVPSelectorOpen] = useState(false);
 
   const menuItems = [
     { id: 'overview', label: 'Visão Geral', icon: Home },
@@ -95,6 +98,7 @@ function App() {
     { name: 'FaithConnect', description: 'Conexão de fé que transcende barreiras geográficas e linguísticas.' },
   ];
 
+  // eslint-disable-next-line no-unused-vars
   const costEstimates = [
     {
       scenario: 'Conservador',
@@ -119,6 +123,7 @@ function App() {
     }
   ];
 
+  // eslint-disable-next-line no-unused-vars
   const bubblePlans = [
     {
       plan: 'Starter',
@@ -211,6 +216,14 @@ function App() {
                   </li>
                   <li className="flex items-center">
                     <Shield className="h-4 w-4 text-green-500 mr-2" />
+                    Oferecer módulo de bíblia com versículos e conteúdo devocional
+                  </li>
+                  <li className="flex items-center">
+                    <Shield className="h-4 w-4 text-green-500 mr-2" />
+                    Disponibilizar gerador de pílulas de fé para capelães
+                  </li>
+                  <li className="flex items-center">
+                    <Shield className="h-4 w-4 text-green-500 mr-2" />
                     Estabelecer base escalável para futuras expansões
                   </li>
                 </ul>
@@ -248,7 +261,7 @@ function App() {
 
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Funcionalidades do MVP</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-3 gap-4">
                       <div>
                         <h4 className="font-medium mb-2">Sistema de Autenticação</h4>
                         <ul className="list-disc list-inside text-sm text-gray-600">
@@ -279,6 +292,22 @@ function App() {
                           <li>Perfis de membros e capelães</li>
                           <li>Sistema de avaliações</li>
                           <li>Histórico de interações</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-medium mb-2">Módulo de Bíblia</h4>
+                        <ul className="list-disc list-inside text-sm text-gray-600">
+                          <li>Versículos diários</li>
+                          <li>Conteúdo devocional</li>
+                          <li>Sugestões por tema</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-medium mb-2">Módulo Pílula</h4>
+                        <ul className="list-disc list-inside text-sm text-gray-600">
+                          <li>Gerador de imagens inspiracionais</li>
+                          <li>Templates para capelães</li>
+                          <li>Compartilhamento automático</li>
                         </ul>
                       </div>
                     </div>
@@ -3116,6 +3145,8 @@ model SupportRequest {
                             <li>Sistema de matching entre solicitações e capelães</li>
                             <li>Perfis básicos de usuários e capelães</li>
                             <li>Notificações push para novas mensagens</li>
+                            <li><strong>Módulo de Bíblia:</strong> Versículos, reflexões e conteúdo devocional</li>
+                            <li><strong>Módulo Pílula:</strong> Gerador de pílulas de fé para capelães compartilharem</li>
                           </ul>
                         </div>
                         <div>
@@ -4922,6 +4953,20 @@ O aplicativo de capelania cristã é uma plataforma digital que conecta capelãe
   - Detecção automática de idioma baseada na localização do usuário e no idioma da mensagem.
   - Suporte a múltiplos idiomas (inglês, espanhol, português, etc.).
 
+#### 2.1.6 Módulo de Bíblia
+- **Versículos Diários**
+  - Versículos selecionados e categorizados por temas
+  - Conteúdo devocional personalizado
+  - Sugestões bíblicas contextualizadas por IA
+  - Sistema de favoritos e histórico de leitura
+
+#### 2.1.7 Módulo Pílula (Gerador de Pílulas de Fé)
+- **Ferramenta Exclusiva para Capelães**
+  - Gerador de imagens inspiracionais com templates profissionais
+  - Sistema de compartilhamento automático para redes sociais
+  - Texto de apoio pré-formatado para divulgação do app
+  - Métricas de engajamento e alcance
+
 ### 2.2 Funcionalidades NÃO Incluídas no MVP (para futuras versões)
 - Sistema de IA para análise de estado emocional.
 - Matching automático avançado baseado em urgência ou complexidade da necessidade.
@@ -5163,6 +5208,32 @@ O aplicativo de capelania cristã é uma plataforma digital que conecta capelãe
             </div>
             
             <div className="flex items-center space-x-4">
+              {/* Desenvolver Agora Button with Animated Gradient Border */}
+              <div className="relative hidden sm:block">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-900 via-green-500 to-blue-900 rounded-lg blur opacity-75 animate-gradient-border"></div>
+                <Button
+                  className="relative bg-white text-gray-900 hover:bg-gray-50 border-0 px-6 py-2 font-bold text-sm rounded-lg transition-all duration-300 hover:scale-105"
+                  onClick={() => {
+                    console.log('Botão clicado!');
+                    setIsMVPSelectorOpen(true);
+                  }}
+                >
+                  ⚡ DESENVOLVER AGORA
+                </Button>
+              </div>
+              
+              {/* Mobile version of Desenvolver Agora Button */}
+              <div className="relative sm:hidden">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-900 via-green-500 to-blue-900 rounded-lg blur opacity-75 animate-gradient-border"></div>
+                <Button
+                  size="sm"
+                  className="relative bg-white text-gray-900 hover:bg-gray-50 border-0 px-3 py-1 font-bold text-xs rounded-lg transition-all duration-300"
+                  onClick={() => setIsMVPSelectorOpen(true)}
+                >
+                  ⚡ DESENVOLVER
+                </Button>
+              </div>
+              
               {/* Design UX-UI Figma Button */}
               <Button
                 variant="outline"
@@ -5242,10 +5313,17 @@ O aplicativo de capelania cristã é uma plataforma digital que conecta capelãe
       
       {/* Toaster para notificações */}
       <Toaster />
+      
+      {/* Banner de conclusão do planejamento */}
+      <CompletionBanner />
+      
+      {/* Modal de seleção de MVP */}
+      <MVPSelector 
+        isOpen={isMVPSelectorOpen} 
+        onClose={() => setIsMVPSelectorOpen(false)} 
+      />
     </div>
   );
 }
 
 export default App;
-
-

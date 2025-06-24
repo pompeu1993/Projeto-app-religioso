@@ -118,3 +118,61 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animação do botão Desenvolver Agora */
+@keyframes gradient-border {
+  0% {
+    background: linear-gradient(45deg, #1e3a8a, #10b981, #1e3a8a, #10b981);
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+  }
+  25% {
+    background: linear-gradient(45deg, #1e3a8a, #059669, #22c55e, #1e3a8a);
+    background-size: 400% 400%;
+    background-position: 100% 50%;
+  }
+  50% {
+    background: linear-gradient(45deg, #10b981, #1e3a8a, #10b981, #059669);
+    background-size: 400% 400%;
+    background-position: 50% 100%;
+  }
+  75% {
+    background: linear-gradient(45deg, #059669, #22c55e, #1e3a8a, #10b981);
+    background-size: 400% 400%;
+    background-position: 50% 0%;
+  }
+  100% {
+    background: linear-gradient(45deg, #1e3a8a, #10b981, #1e3a8a, #10b981);
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-border {
+  animation: gradient-border 3s ease-in-out infinite;
+  background: linear-gradient(45deg, #1e3a8a, #10b981, #1e3a8a, #10b981);
+  background-size: 400% 400%;
+}
+
+/* Efeito hover adicional para o botão */
+.animate-gradient-border:hover {
+  animation-duration: 1.5s;
+  filter: brightness(1.2);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(30, 58, 138, 0.2);
+}
+
+/* Efeito de pulsação adicional */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-gradient-border {
+  animation: gradient-border 3s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
+}
