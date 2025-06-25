@@ -22,7 +22,7 @@ const LoginPopup = ({ isOpen, onClose, onLoginSuccess }) => {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Verificar credenciais
-    if (username === 'Nobre' && password === 'Nobre') {
+    if (username === 'Usuario' && password === 'mega!') {
       onLoginSuccess();
       onClose();
     } else {
@@ -123,12 +123,6 @@ const LoginPopup = ({ isOpen, onClose, onLoginSuccess }) => {
             >
               {isLoading ? 'Entrando...' : 'Entrar'}
             </Button>
-
-            <div className="text-center text-sm text-gray-500 mt-4">
-              <p>Credenciais de teste:</p>
-              <p><strong>Usuário:</strong> Nobre</p>
-              <p><strong>Senha:</strong> Nobre</p>
-            </div>
           </form>
         </CardContent>
       </Card>
