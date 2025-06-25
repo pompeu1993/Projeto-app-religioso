@@ -68,6 +68,62 @@ function App() {
   const [selectedMenu, setSelectedMenu] = useState('overview');
   const [isMVPSelectorOpen, setIsMVPSelectorOpen] = useState(false);
 
+  // Proteção contra cópia e contexto
+  useEffect(() => {
+    // Desabilitar menu de contexto (botão direito)
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    // Desabilitar atalhos de teclado comuns
+    const handleKeyDown = (e) => {
+      // Desabilitar Ctrl+C, Ctrl+A, Ctrl+V, Ctrl+X, Ctrl+S, Ctrl+P, F12, Ctrl+Shift+I, Ctrl+U
+      if (
+        (e.ctrlKey && (e.key === 'c' || e.key === 'C')) ||
+        (e.ctrlKey && (e.key === 'a' || e.key === 'A')) ||
+        (e.ctrlKey && (e.key === 'v' || e.key === 'V')) ||
+        (e.ctrlKey && (e.key === 'x' || e.key === 'X')) ||
+        (e.ctrlKey && (e.key === 's' || e.key === 'S')) ||
+        (e.ctrlKey && (e.key === 'p' || e.key === 'P')) ||
+        (e.ctrlKey && (e.key === 'u' || e.key === 'U')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.key === 'c')) ||
+        e.key === 'F12'
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    };
+
+    // Desabilitar seleção de texto com mouse
+    const handleSelectStart = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    // Desabilitar drag and drop
+    const handleDragStart = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    // Adicionar event listeners
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('selectstart', handleSelectStart);
+    document.addEventListener('dragstart', handleDragStart);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('selectstart', handleSelectStart);
+      document.removeEventListener('dragstart', handleDragStart);
+    };
+  }, []);
+
   const menuItems = [
     { id: 'overview', label: 'Visão Geral', icon: Home },
     { id: 'briefing', label: 'Briefing do Projeto', icon: FileText },
