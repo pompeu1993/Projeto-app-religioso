@@ -282,6 +282,22 @@ function App() {
                     <Shield className="h-4 w-4 text-green-500 mr-2" />
                     Estabelecer base escalável para futuras expansões
                   </li>
+                  <li className="flex items-center">
+                    <Shield className="h-4 w-4 text-green-500 mr-2" />
+                    Implementar triagem inteligente com IA para análise de sentimentos
+                  </li>
+                  <li className="flex items-center">
+                    <Shield className="h-4 w-4 text-green-500 mr-2" />
+                    Oferecer análise de perfil comportamental (DISC) para melhor direcionamento
+                  </li>
+                  <li className="flex items-center">
+                    <Shield className="h-4 w-4 text-green-500 mr-2" />
+                    Disponibilizar pílulas de sabedoria personalizadas com IA
+                  </li>
+                  <li className="flex items-center">
+                    <Shield className="h-4 w-4 text-green-500 mr-2" />
+                    Permitir reuniões em vídeo em grupo para sessões coletivas
+                  </li>
                 </ul>
               </CardContent>
             </Card>
@@ -364,6 +380,38 @@ function App() {
                           <li>Gerador de imagens inspiracionais</li>
                           <li>Templates para capelães</li>
                           <li>Compartilhamento automático</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-medium mb-2">Triagem com IA</h4>
+                        <ul className="list-disc list-inside text-sm text-gray-600">
+                          <li>Análise de sentimentos</li>
+                          <li>Classificação de urgência</li>
+                          <li>Direcionamento inteligente</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-medium mb-2">Análise DISC</h4>
+                        <ul className="list-disc list-inside text-sm text-gray-600">
+                          <li>Questionário comportamental</li>
+                          <li>Relatório de perfil</li>
+                          <li>Matching por compatibilidade</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-medium mb-2">Pílulas de Sabedoria IA</h4>
+                        <ul className="list-disc list-inside text-sm text-gray-600">
+                          <li>Conteúdo personalizado</li>
+                          <li>Configuração de temas</li>
+                          <li>Frequência customizável</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-medium mb-2">Videochamadas em Grupo</h4>
+                        <ul className="list-disc list-inside text-sm text-gray-600">
+                          <li>Salas de vídeo para grupos</li>
+                          <li>Compartilhamento de tela</li>
+                          <li>Gravação de sessões</li>
                         </ul>
                       </div>
                     </div>
@@ -687,6 +735,146 @@ function App() {
                         <div className="flex items-start">
                           <Badge variant="secondary" className="mr-3 mt-1">RF008.4</Badge>
                           <p>O sistema deve permitir que administradores revisem e aprovem capelões.</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* RF009 - Sistema de Triagem com IA */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center text-lg">
+                        <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+                        RF009 - Sistema de Triagem com IA
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF009.1</Badge>
+                          <p>O sistema deve analisar o conteúdo das solicitações usando IA para detectar sentimentos.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF009.2</Badge>
+                          <p>O sistema deve classificar solicitações em níveis de urgência (urgente, emergência, leve).</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF009.3</Badge>
+                          <p>O sistema deve exibir tela de diagnóstico emocional com resultado da análise.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF009.4</Badge>
+                          <p>O sistema deve direcionar automaticamente para o capelão mais adequado baseado na análise.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF009.5</Badge>
+                          <p>O sistema deve exibir tela de direcionamento mostrando o capelão recomendado.</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* RF010 - Sistema de Análise DISC */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center text-lg">
+                        <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+                        RF010 - Sistema de Análise DISC
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF010.1</Badge>
+                          <p>O sistema deve apresentar questionário DISC com perguntas de análise comportamental.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF010.2</Badge>
+                          <p>O sistema deve processar respostas e gerar perfil comportamental do usuário.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF010.3</Badge>
+                          <p>O sistema deve exibir relatório detalhado com análise comportamental.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF010.4</Badge>
+                          <p>O sistema deve usar perfil DISC para melhorar matching com capelães compatíveis.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF010.5</Badge>
+                          <p>O sistema deve armazenar perfil DISC do usuário para consultas futuras.</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* RF011 - Sistema de Pílulas de Sabedoria com IA */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center text-lg">
+                        <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+                        RF011 - Sistema de Pílulas de Sabedoria com IA
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF011.1</Badge>
+                          <p>O sistema deve permitir que capelães configurem temas para pílulas de sabedoria.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF011.2</Badge>
+                          <p>O sistema deve permitir configuração de frequência de envio (diária, semanal, etc).</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF011.3</Badge>
+                          <p>O sistema deve usar IA para personalizar conteúdo baseado no perfil do usuário.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF011.4</Badge>
+                          <p>O sistema deve exibir tela de visualização das pílulas de sabedoria.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF011.5</Badge>
+                          <p>O sistema deve enviar notificações automáticas conforme frequência configurada.</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* RF012 - Sistema de Videochamadas em Grupo */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center text-lg">
+                        <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+                        RF012 - Sistema de Videochamadas em Grupo
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF012.1</Badge>
+                          <p>O sistema deve permitir criação de salas de videochamada para até 50 participantes.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF012.2</Badge>
+                          <p>O sistema deve permitir compartilhamento de tela durante videochamadas.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF012.3</Badge>
+                          <p>O sistema deve permitir gravação de sessões com consentimento dos participantes.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF012.4</Badge>
+                          <p>O sistema deve incluir chat durante videochamadas para perguntas e comentários.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF012.5</Badge>
+                          <p>O sistema deve permitir agendamento prévio de sessões em grupo.</p>
+                        </div>
+                        <div className="flex items-start">
+                          <Badge variant="secondary" className="mr-3 mt-1">RF012.6</Badge>
+                          <p>O sistema deve incluir controles de moderação (mutar, remover participantes).</p>
                         </div>
                       </div>
                     </CardContent>
@@ -1285,6 +1473,147 @@ function App() {
                       </div>
                     </CardContent>
                   </Card>
+
+                  {/* OpenAI API */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center text-lg">
+                        <Zap className="h-5 w-5 mr-2 text-purple-600" />
+                        OpenAI API
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="font-semibold mb-2">Função no Sistema</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Análise de sentimentos para triagem emocional</li>
+                            <li>Classificação de urgência das solicitações</li>
+                            <li>Geração de pílulas de sabedoria personalizadas</li>
+                            <li>Processamento de respostas do questionário DISC</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Integração Técnica</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>API REST com autenticação via Bearer token</li>
+                            <li>Modelos GPT-4 para análise avançada</li>
+                            <li>Rate limiting: 10.000 tokens/min</li>
+                            <li>Latência média: 1-3 segundos por análise</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Configuração Necessária</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Conta OpenAI com créditos</li>
+                            <li>Chave de API configurada</li>
+                            <li>Configuração de prompts específicos</li>
+                            <li>Monitoramento de uso de tokens</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Daily.co API */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center text-lg">
+                        <Users className="h-5 w-5 mr-2 text-indigo-600" />
+                        Daily.co API (Recomendado)
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="font-semibold mb-2">Função no Sistema</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Videochamadas em grupo até 50 participantes</li>
+                            <li>Compartilhamento de tela em tempo real</li>
+                            <li>Gravação de sessões com consentimento</li>
+                            <li>Chat durante videochamadas</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Vantagens para Bubble.io</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Plugin oficial disponível</li>
+                            <li>Integração via iframe simples</li>
+                            <li>API REST fácil de usar</li>
+                            <li>Documentação específica para no-code</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Integração Técnica</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>SDK para React Native e Web</li>
+                            <li>WebRTC otimizado</li>
+                            <li>API REST simples</li>
+                            <li>Webhooks para eventos</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Configuração Necessária</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Conta Daily.co (plano gratuito disponível)</li>
+                            <li>Chave de API</li>
+                            <li>Configuração de domínios permitidos</li>
+                            <li>Webhooks para eventos (opcional)</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Jitsi Meet API */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center text-lg">
+                        <Users className="h-5 w-5 mr-2 text-green-600" />
+                        Jitsi Meet API (Alternativa Gratuita)
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="font-semibold mb-2">Função no Sistema</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Videochamadas em grupo ilimitadas</li>
+                            <li>Compartilhamento de tela</li>
+                            <li>Chat integrado</li>
+                            <li>Gravação local</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Vantagens</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Completamente gratuito</li>
+                            <li>Open source</li>
+                            <li>Integração via iframe</li>
+                            <li>Sem limites de participantes</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Integração Bubble.io</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Plugin disponível</li>
+                            <li>Embed via HTML element</li>
+                            <li>Configuração simples</li>
+                            <li>Customização limitada</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Limitações</h4>
+                          <ul className="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Menos controle sobre UI</li>
+                            <li>Gravação em nuvem requer servidor próprio</li>
+                            <li>Branding Jitsi visível</li>
+                            <li>Performance pode variar</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </TabsContent>
 
@@ -1352,9 +1681,25 @@ function App() {
                                 <li>• Custo: R$ 0/mês</li>
                               </ul>
                             </div>
+                            <div>
+                              <h5 className="font-medium mb-2">OpenAI API</h5>
+                              <ul className="text-sm space-y-1">
+                                <li>• 5.000 análises/mês</li>
+                                <li>• GPT-4 Turbo</li>
+                                <li>• Custo: R$ 250/mês</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <h5 className="font-medium mb-2">Daily.co</h5>
+                              <ul className="text-sm space-y-1">
+                                <li>• 10.000 minutos/mês</li>
+                                <li>• Videochamadas HD</li>
+                                <li>• Custo: R$ 300/mês</li>
+                              </ul>
+                            </div>
                           </div>
                           <div className="mt-4 p-3 bg-green-50 rounded-lg">
-                            <p className="font-semibold text-green-800">Total Estimado: R$ 1.095/mês</p>
+                            <p className="font-semibold text-green-800">Total Estimado: R$ 1.645/mês</p>
                           </div>
                         </div>
 
@@ -1410,9 +1755,25 @@ function App() {
                                 <li>• Custo: R$ 50/mês</li>
                               </ul>
                             </div>
+                            <div>
+                              <h5 className="font-medium mb-2">OpenAI API</h5>
+                              <ul className="text-sm space-y-1">
+                                <li>• 25.000 análises/mês</li>
+                                <li>• GPT-4 Turbo</li>
+                                <li>• Custo: R$ 1.250/mês</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <h5 className="font-medium mb-2">Daily.co</h5>
+                              <ul className="text-sm space-y-1">
+                                <li>• 50.000 minutos/mês</li>
+                                <li>• Videochamadas HD</li>
+                                <li>• Custo: R$ 1.500/mês</li>
+                              </ul>
+                            </div>
                           </div>
                           <div className="mt-4 p-3 bg-orange-50 rounded-lg">
-                            <p className="font-semibold text-orange-800">Total Estimado: R$ 10.940/mês</p>
+                            <p className="font-semibold text-orange-800">Total Estimado: R$ 13.690/mês</p>
                           </div>
                         </div>
 
@@ -1468,9 +1829,25 @@ function App() {
                                 <li>• Custo: R$ 100/mês</li>
                               </ul>
                             </div>
+                            <div>
+                              <h5 className="font-medium mb-2">OpenAI API</h5>
+                              <ul className="text-sm space-y-1">
+                                <li>• 50.000 análises/mês</li>
+                                <li>• GPT-4 Turbo</li>
+                                <li>• Custo: R$ 2.500/mês</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <h5 className="font-medium mb-2">Daily.co</h5>
+                              <ul className="text-sm space-y-1">
+                                <li>• 100.000 minutos/mês</li>
+                                <li>• Videochamadas HD</li>
+                                <li>• Custo: R$ 3.000/mês</li>
+                              </ul>
+                            </div>
                           </div>
                           <div className="mt-4 p-3 bg-red-50 rounded-lg">
-                            <p className="font-semibold text-red-800">Total Estimado: R$ 48.940/mês</p>
+                            <p className="font-semibold text-red-800">Total Estimado: R$ 54.440/mês</p>
                           </div>
                         </div>
                       </div>
@@ -1737,6 +2114,119 @@ function App() {
                             <li>• <strong>Integrações:</strong> Algumas APIs podem ter limitações de integração</li>
                           </ul>
                         </div>
+
+                        {/* Viabilidade das Novas Funcionalidades no Bubble.io */}
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center text-lg">
+                              <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+                              Viabilidade das Novas Funcionalidades no Bubble.io
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-6">
+                              {/* Triagem com IA */}
+                              <div className="border rounded-lg p-4">
+                                <h4 className="font-semibold text-lg mb-3 text-purple-600">🤖 Triagem com IA</h4>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                  <div>
+                                    <h5 className="font-medium mb-2 text-green-600">✅ Viável</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• Plugin OpenAI oficial disponível</li>
+                                      <li>• API Connector nativo</li>
+                                      <li>• Workflows para processamento</li>
+                                      <li>• Facilidade: 9/10</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h5 className="font-medium mb-2">Implementação</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• Configurar API Connector</li>
+                                      <li>• Criar workflows de análise</li>
+                                      <li>• Design das telas de resultado</li>
+                                      <li>• Sistema de notificações</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Análise DISC */}
+                              <div className="border rounded-lg p-4">
+                                <h4 className="font-semibold text-lg mb-3 text-blue-600">📊 Análise DISC</h4>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                  <div>
+                                    <h5 className="font-medium mb-2 text-green-600">✅ Totalmente Viável</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• Formulários nativos do Bubble</li>
+                                      <li>• Cálculos via workflows</li>
+                                      <li>• Charts.js para gráficos</li>
+                                      <li>• Facilidade: 10/10</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h5 className="font-medium mb-2">Implementação</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• Criar questionário multi-step</li>
+                                      <li>• Workflows de cálculo DISC</li>
+                                      <li>• Gráficos com Chart.js</li>
+                                      <li>• PDF generation plugin</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Pílulas de Sabedoria IA */}
+                              <div className="border rounded-lg p-4">
+                                <h4 className="font-semibold text-lg mb-3 text-indigo-600">💡 Pílulas de Sabedoria IA</h4>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                  <div>
+                                    <h5 className="font-medium mb-2 text-green-600">✅ Viável</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• OpenAI API para geração</li>
+                                      <li>• Scheduled workflows</li>
+                                      <li>• Send notifications action</li>
+                                      <li>• Facilidade: 8/10</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h5 className="font-medium mb-2">Implementação</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• Tela de configuração</li>
+                                      <li>• Workflows agendados</li>
+                                      <li>• Integração OpenAI</li>
+                                      <li>• Sistema de notificações</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Videochamadas */}
+                              <div className="border rounded-lg p-4">
+                                <h4 className="font-semibold text-lg mb-3 text-red-600">📹 Videochamadas em Grupo</h4>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                  <div>
+                                    <h5 className="font-medium mb-2 text-green-600">✅ Viável com Daily.co</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• Plugin Daily.co disponível</li>
+                                      <li>• Embed via HTML element</li>
+                                      <li>• API REST simples</li>
+                                      <li>• Facilidade: 9/10</li>
+                                    </ul>
+                                  </div>
+                                  <div>
+                                    <h5 className="font-medium mb-2 text-orange-600">⚠️ Limitado com Jitsi</h5>
+                                    <ul className="text-sm space-y-1">
+                                      <li>• Iframe embed básico</li>
+                                      <li>• Controles limitados</li>
+                                      <li>• Branding Jitsi visível</li>
+                                      <li>• Facilidade: 6/10</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
                       </div>
                     </CardContent>
                   </Card>
@@ -1754,21 +2244,21 @@ function App() {
                         <div className="grid md:grid-cols-3 gap-4">
                           <div className="text-center p-4 border rounded-lg">
                             <h4 className="font-semibold text-blue-600">Cenário Conservador</h4>
-                            <p className="text-2xl font-bold text-blue-800">R$ 27.245/mês</p>
+                            <p className="text-2xl font-bold text-blue-800">R$ 27.795/mês</p>
                             <p className="text-sm text-gray-600">1.000 usuários ativos</p>
-                            <p className="text-xs text-green-600 mt-1">Bubble.io: R$ 13.945/mês</p>
+                            <p className="text-xs text-green-600 mt-1">Bubble.io: R$ 14.495/mês</p>
                           </div>
                           <div className="text-center p-4 border rounded-lg">
                             <h4 className="font-semibold text-orange-600">Cenário Moderado</h4>
-                            <p className="text-2xl font-bold text-orange-800">R$ 37.090/mês</p>
+                            <p className="text-2xl font-bold text-orange-800">R$ 39.840/mês</p>
                             <p className="text-sm text-gray-600">5.000 usuários ativos</p>
-                            <p className="text-xs text-green-600 mt-1">Bubble.io: R$ 23.790/mês</p>
+                            <p className="text-xs text-green-600 mt-1">Bubble.io: R$ 26.540/mês</p>
                           </div>
                           <div className="text-center p-4 border rounded-lg">
                             <h4 className="font-semibold text-red-600">Cenário Otimista</h4>
-                            <p className="text-2xl font-bold text-red-800">R$ 75.090/mês</p>
+                            <p className="text-2xl font-bold text-red-800">R$ 80.590/mês</p>
                             <p className="text-sm text-gray-600">10.000 usuários ativos</p>
-                            <p className="text-xs text-green-600 mt-1">Bubble.io: R$ 61.790/mês</p>
+                            <p className="text-xs text-green-600 mt-1">Bubble.io: R$ 67.290/mês</p>
                           </div>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">

@@ -17,6 +17,10 @@ O aplicativo de capelania cristã é uma plataforma digital que conecta capelãe
 - **Gestão de Usuários**: Implementar um sistema robusto de cadastro e gerenciamento de perfis para membros e capelães.
 - **Funcionalidades Essenciais**: Desenvolver as funcionalidades mínimas necessárias para permitir a interação e o suporte espiritual.
 - **Base para Expansão**: Estabelecer uma arquitetura escalável que permita a adição de novas funcionalidades em futuras versões.
+- **Triagem Inteligente**: Implementar sistema de IA para análise de sentimentos e classificação de urgência das solicitações.
+- **Análise Comportamental**: Oferecer análise de perfil DISC para melhor compatibilidade entre membros e capelães.
+- **Pílulas de Sabedoria IA**: Disponibilizar conteúdo personalizado com IA baseado no perfil e necessidades do usuário.
+- **Videochamadas em Grupo**: Permitir sessões coletivas através de videochamadas com até 50 participantes.
 
 ## 2. Jornadas de Usuário Detalhadas (User Flow)
 
@@ -148,12 +152,116 @@ O aplicativo de capelania cristã é uma plataforma digital que conecta capelãe
 - **Moderação Automática**: Filtros inteligentes para detecção de problemas
 - **Recurso de Apelação**: Processo para contestar ações disciplinares
 
-### 3.9 Módulo Pílula (Gerador de Pílulas de Fé)
+### 3.9 Módulo de Triagem com IA
 
 #### 3.9.1 Funcionalidade Principal
+Sistema inteligente de triagem que analisa automaticamente as solicitações de apoio usando IA para detectar sentimentos, classificar urgência e direcionar para o capelão mais adequado.
+
+#### 3.9.2 Análise de Sentimentos
+- **Processamento de Texto**: Análise automática do conteúdo das solicitações
+- **Detecção de Emoções**: Identificação de estados emocionais (tristeza, ansiedade, raiva, desespero)
+- **Classificação de Urgência**: Categorização em urgente, emergência ou leve
+- **Palavras-chave de Alerta**: Detecção de termos que indicam risco
+- **Score de Prioridade**: Pontuação para ordenar atendimentos
+
+#### 3.9.3 Tela de Diagnóstico Emocional
+- **Dashboard de Análise**: Visualização do resultado da análise de sentimentos
+- **Gráficos de Emoções**: Representação visual dos sentimentos detectados
+- **Indicadores de Urgência**: Alertas visuais para casos prioritários
+- **Histórico de Análises**: Registro de análises anteriores
+- **Recomendações**: Sugestões baseadas na análise
+
+#### 3.9.4 Sistema de Direcionamento
+- **Matching Inteligente**: Algoritmo que conecta necessidade com especialização
+- **Perfil de Compatibilidade**: Score de adequação capelão-membro
+- **Disponibilidade em Tempo Real**: Verificação de capelães online
+- **Especialização Relevante**: Priorização por área de atuação
+- **Tela de Direcionamento**: Interface mostrando capelão recomendado
+
+### 3.10 Módulo de Análise DISC
+
+#### 3.10.1 Funcionalidade Principal
+Sistema de análise comportamental baseado no método DISC para identificar o perfil psicológico do usuário e melhorar a compatibilidade no matching com capelães.
+
+#### 3.10.2 Questionário DISC
+- **Interface de Perguntas**: Tela intuitiva para responder o questionário
+- **40 Perguntas Validadas**: Conjunto padrão de perguntas DISC
+- **Opções de Resposta**: Escala de concordância (1-5)
+- **Progresso Visual**: Barra mostrando avanço no questionário
+- **Tempo Estimado**: 15-20 minutos para completar
+
+#### 3.10.3 Processamento e Análise
+- **Algoritmo DISC**: Cálculo dos scores para cada dimensão
+- **Perfil Dominante**: Identificação do tipo principal (D, I, S ou C)
+- **Perfil Secundário**: Combinações e nuances do perfil
+- **Pontos Fortes**: Características positivas do perfil
+- **Áreas de Desenvolvimento**: Aspectos a melhorar
+
+#### 3.10.4 Relatório de Resultados
+- **Tela de Resultado**: Dashboard com análise completa
+- **Gráfico Radar**: Visualização das 4 dimensões
+- **Descrição Detalhada**: Explicação do perfil identificado
+- **Compatibilidade**: Sugestões de tipos de capelães compatíveis
+- **Download PDF**: Opção de baixar relatório completo
+
+### 3.11 Módulo de Pílulas de Sabedoria com IA
+
+#### 3.11.1 Funcionalidade Principal
+Sistema personalizado de geração de conteúdo inspiracional usando IA, adaptado ao perfil, necessidades e momento de vida do usuário.
+
+#### 3.11.2 Configuração pelo Capelão
+- **Tela de Configuração**: Interface para capelães definirem parâmetros
+- **Seleção de Temas**: Categorias de conteúdo (esperança, força, paz, etc.)
+- **Frequência de Envio**: Diária, semanal, quinzenal ou mensal
+- **Horário Preferencial**: Definição do melhor momento para envio
+- **Personalização**: Ajustes baseados no perfil do membro
+
+#### 3.11.3 Geração com IA
+- **Análise de Contexto**: IA considera histórico e situação atual
+- **Conteúdo Relevante**: Mensagens alinhadas com necessidades
+- **Base Bíblica**: Integração com versículos apropriados
+- **Linguagem Adaptada**: Tom e estilo conforme perfil DISC
+- **Variedade**: Algoritmo evita repetições
+
+#### 3.11.4 Tela de Visualização
+- **Design Inspiracional**: Interface visualmente atraente
+- **Mensagem do Dia**: Destaque para pílula atual
+- **Histórico**: Acesso a pílulas anteriores
+- **Favoritos**: Opção de salvar mensagens especiais
+- **Compartilhamento**: Botões para redes sociais
+
+### 3.12 Módulo de Videochamadas em Grupo
+
+#### 3.12.1 Funcionalidade Principal
+Sistema de videoconferência integrado para permitir sessões de aconselhamento em grupo, estudos bíblicos e reuniões de oração com múltiplos participantes.
+
+#### 3.12.2 Recursos de Videochamada
+- **Salas Virtuais**: Criação de salas para até 50 participantes
+- **Qualidade HD**: Vídeo em alta definição adaptável
+- **Áudio Cristalino**: Cancelamento de ruído e eco
+- **Compartilhamento de Tela**: Para apresentações e estudos
+- **Chat Simultâneo**: Mensagens durante a chamada
+
+#### 3.12.3 Controles de Moderação
+- **Gerenciamento de Participantes**: Admitir, remover, silenciar
+- **Modo Apresentador**: Destaque para quem está falando
+- **Levantar a Mão**: Sistema de pedidos de palavra
+- **Breakout Rooms**: Divisão em grupos menores
+- **Controle de Áudio/Vídeo**: Mute all, câmeras on/off
+
+#### 3.12.4 Recursos Adicionais
+- **Gravação de Sessões**: Com consentimento dos participantes
+- **Agendamento**: Integração com calendário
+- **Lembretes Automáticos**: Notificações antes da sessão
+- **Relatório de Presença**: Lista de participantes
+- **Transcrição**: Opção de transcrever conversas (futura)
+
+### 3.13 Módulo Pílula (Gerador de Pílulas de Fé)
+  
+  #### 3.13.1 Funcionalidade Principal
 O Módulo Pílula é uma ferramenta exclusiva para capelães e administradores criarem conteúdo visual inspiracional para compartilhamento em redes sociais, promovendo o aplicativo e fortalecendo a comunidade.
 
-#### 3.9.2 Funcionalidades do Gerador
+#### 3.13.2 Funcionalidades do Gerador
 
 **Acesso Restrito:**
 - Disponível apenas para perfis de capelão aprovados e administradores
@@ -184,7 +292,7 @@ O Módulo Pílula é uma ferramenta exclusiva para capelães e administradores c
 - Texto de apoio pré-formatado gerado automaticamente
 - Estatísticas de compartilhamento por capelão
 
-#### 3.9.3 Templates e Design
+#### 3.13.3 Templates e Design
 
 **Elementos Obrigatórios dos Templates:**
 - Background inspirador (céu, natureza, texturas suaves)
@@ -206,7 +314,7 @@ O Módulo Pílula é uma ferramenta exclusiva para capelães e administradores c
 - Tamanho máximo: 2MB por imagem
 - Fontes: Lato, Open Sans, Montserrat
 
-#### 3.9.4 Sistema de Compartilhamento
+#### 3.13.4 Sistema de Compartilhamento
 
 **Texto de Apoio Automático:**
 ```
@@ -284,17 +392,34 @@ Baixe nosso aplicativo e conecte-se com nossa comunidade de fé.
 
 ### 4.3 Automação de Processos
 
-#### 4.3.1 Matching Inteligente
+#### 4.3.1 Matching Inteligente com IA
 - **Algoritmo de Compatibilidade**: Score baseado em especialização vs necessidade
+- **Análise DISC**: Compatibilidade comportamental entre membro e capelão
 - **Disponibilidade em Tempo Real**: Priorização de capelães online
 - **Balanceamento de Carga**: Distribuição equilibrada de solicitações
 - **Fallback Automático**: Reatribuição em caso de não resposta
+- **Aprendizado Contínuo**: IA melhora matching baseado em feedback
 
-#### 4.3.2 Moderação Automatizada
+#### 4.3.2 Triagem Automatizada com IA
+- **Análise de Sentimentos**: Classificação automática do estado emocional
+- **Detecção de Urgência**: Identificação de casos críticos ou emergenciais
+- **Palavras-chave de Risco**: Monitoramento de termos que indicam perigo
+- **Priorização Inteligente**: Ordenação automática por nível de necessidade
+- **Alertas Automáticos**: Notificação imediata para casos urgentes
+
+#### 4.3.3 Moderação Automatizada
 - **Detecção de Conteúdo Inadequado**: Filtros automáticos de linguagem
 - **Análise de Sentimento**: Identificação de conversas problemáticas
 - **Escalação Automática**: Encaminhamento para moderadores humanos
 - **Prevenção de Spam**: Detecção de comportamentos suspeitos
+- **Monitoramento de Videochamadas**: Detecção de comportamentos inadequados
+
+#### 4.3.4 Geração de Conteúdo com IA
+- **Pílulas de Sabedoria Personalizadas**: Conteúdo adaptado ao perfil do usuário
+- **Sugestões Bíblicas Contextuais**: Versículos relevantes para cada situação
+- **Horários Otimizados**: IA determina melhor momento para envio
+- **Variação de Conteúdo**: Evita repetições e mantém engajamento
+- **Feedback Loop**: Aprendizado baseado em interações do usuário
 
 ## 5. Orçamento Megateck
 
